@@ -4,7 +4,7 @@ export default function Ewallet() {
   const amountInput = useRef();
   const [balance, setBalance] = useState(0);
   const [transactions, setTransactions] = useState(
-    JSON.parse(localStorage.getItem("transactions"))
+    JSON.parse(localStorage.getItem("transactions")||[])
   );
   // localStorage.setItem("transactions",JSON.stringify(transactions))
   const deposite = () => {
